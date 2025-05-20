@@ -6,4 +6,7 @@ class Order < ApplicationRecord
 
   validates :stripe_charge_id, presence: true
 
+  def total_price
+    line_items.includes(:product).sum { |item| item.product.price * item.quantity }
+  end
 end
