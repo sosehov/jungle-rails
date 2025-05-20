@@ -8,5 +8,5 @@ class Order < ApplicationRecord
 
   def total_price
     line_items.includes(:product).sum { |item| item.product.price * item.quantity }
-  end
+  end 
 end
