@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'about', to: 'about#index', as: 'about'
+  
   namespace :admin do
     get 'categories/index'
   end
