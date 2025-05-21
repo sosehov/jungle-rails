@@ -1,0 +1,7 @@
+<h1>Admin Categories</h1>
+
+<ul class="list-group">
+  <% @categories.each do |category| %>
+    <li class="list-group-item"><%= category.name %></li>
+  <% end %>
+</ul>
