@@ -66,7 +66,7 @@
         </li>
         <% if current_user %>
           <li class="nav-item">
-            <span class="nav-link">Signed in as <strong><%= current_user.name %></strong></span>
+            <span class="nav-link">Signed in as <strong><%= "#{current_user.first_name} #{current_user.last_name}" %></strong></span>
           </li>
           <li class="nav-item">
             <%= link_to 'Logout', '/logout', method: :delete, class: "nav-link" %>
